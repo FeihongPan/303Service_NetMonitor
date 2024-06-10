@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NetMonitorWidget</class>
+ <widget class="QWidget" name="NetMonitorWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>270</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="GroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>560</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="lbl_App">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>60</y>
+      <width>50</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>APP</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_State">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>60</y>
+      <width>50</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>State</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_NetState">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>15</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>connected</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GroupBox</class>
+   <extends>QGroupBox</extends>
+   <header>CustomerWidget/GroupBox/groupbox.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

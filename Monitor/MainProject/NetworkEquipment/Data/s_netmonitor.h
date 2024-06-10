@@ -1,0 +1,52 @@
+﻿/***********************************************************************
+* Copyright (C) 2024, iStar.
+*
+* File Name:        s_netmonitor.h
+* Description:      NET模块数据类型
+* Version:          V1.0.0
+* Author:           Feihong Pan
+* Date:             2024-1-16
+* Modify Record：
+*       V2.0.0     FeihongPan     2024-04-17     1921#2锁定版本
+***********************************************************************/
+
+#ifndef S_NETMONITOR_H
+#define S_NETMONITOR_H
+
+#include "BasicValue/serializabledic.h"
+#include "BasicValue/serializablelist.h"
+
+/// <summary>
+/// 所有IP监控软件下所有部署软件的实时状态的合集数据结构
+/// </summary>
+class S_Dic_AppState : public QSerializer
+{
+    Q_GADGET
+    QS_SERIALIZABLE
+
+    QS_QT_DICT_OBJECTS(QMap, QString, S_Dic_StringBool, values); // m_dic_AllAppState
+
+public:
+    S_Dic_AppState();
+    S_Dic_AppState(const S_Dic_AppState &dic_AllAppState);
+    S_Dic_AppState &operator=(const S_Dic_AppState &dic_AllAppState);
+};
+
+/// <summary>
+/// 接受GUI层对相应IP和部署软件操作命令所需数据类型
+/// </summary>
+class S_AppOperator : public QSerializer
+{
+    Q_GADGET
+    QS_SERIALIZABLE
+
+    QS_FIELD(QString, IP);
+    QS_FIELD(QString, appName);
+
+public:
+    S_AppOperator();
+    S_AppOperator(const S_AppOperator &dic_AppNameInfo);
+    S_AppOperator &operator=(const S_AppOperator &dic_AppNameInfo);
+};
+
+#endif // S_NETMONITOR_H
